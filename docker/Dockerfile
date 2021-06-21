@@ -1,6 +1,6 @@
 FROM node:lts-alpine
-LABEL maintainer="whyour"
-ARG QL_URL=https://github.com/whyour/qinglong.git
+LABEL maintainer="myderr"
+ARG QL_URL=https://github.com/myderr/qinglong.git
 ARG QL_BRANCH=master
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
     LANG=zh_CN.UTF-8 \
@@ -12,18 +12,18 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && apk update -f \
     && apk upgrade \
     && apk --no-cache add -f bash \
-                             coreutils \
-                             moreutils \
-                             git \
-                             curl \
-                             wget \
-                             tzdata \
-                             perl \
-                             openssl \
-                             nginx \
-                             python3 \
-                             jq \
-                             openssh \
+    coreutils \
+    moreutils \
+    git \
+    curl \
+    wget \
+    tzdata \
+    perl \
+    openssl \
+    nginx \
+    python3 \
+    jq \
+    openssh \
     && rm -rf /var/cache/apk/* \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone \
