@@ -29,8 +29,8 @@ const initData = [
   {
     name: '重启花语',
     command: 'pkill JDC && nohup /ql/JDC &',
-    schedule: '1 * * * *',
-    status: CrontabStatus.disabled,
+    schedule: '1 1 1 * *',
+    status: CrontabStatus.idle,
   },
 ];
 
