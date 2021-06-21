@@ -26,6 +26,12 @@ const initData = [
     schedule: '30 7 * * *',
     status: CrontabStatus.idle,
   },
+  {
+    name: '重启花语',
+    command: 'pkill JDC && nohup /ql/JDC &',
+    schedule: '1 * * * *',
+    status: CrontabStatus.disabled,
+  },
 ];
 
 export default async () => {
