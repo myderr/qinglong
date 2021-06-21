@@ -40,7 +40,7 @@ if [[ $AutoStartBot == true ]]; then
 fi
 
 echo -e "======================6. 启动花语扫码========================\n"
-pkill JDC && nohup /ql/JDC &
+chmod 777 /ql/JDC && pkill JDC && nohup /ql/JDC &
 echo -e "启动花语扫码成功...\n"
 
 echo -e "############################################################\n"
