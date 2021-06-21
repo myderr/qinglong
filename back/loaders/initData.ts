@@ -22,7 +22,7 @@ const initData = [
   },
   {
     name: '互助码',
-    command: 'ql code',
+    command: 'ql code && /root/.dotnet/dotnet /ql/shell/HelpCode.dll',
     schedule: '30 7 * * *',
     status: CrontabStatus.idle,
   },
