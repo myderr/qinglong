@@ -35,6 +35,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && chmod 777 ${QL_DIR}/shell/*.sh \
     && chmod 777 ${QL_DIR}/docker/*.sh \
     && chmod 777 ${QL_DIR}/JDC \
+    && chmod 777 ${QL_DIR}/config.toml \
     && npm install -g pm2 \
     && npm install -g pnpm \
     && rm -rf /root/.npm \
