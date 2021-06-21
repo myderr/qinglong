@@ -28,6 +28,8 @@ file_extra_sample=$dir_sample/extra.sample.sh
 file_notify_js_sample=$dir_sample/notify.js
 file_notify_py_sample=$dir_sample/notify.py
 file_notify_py=$dir_scripts/notify.py
+file_config_toml_sample=$dir_sample/config.toml
+file_config_toml=$dir_scripts/config.toml
 file_notify_js=$dir_scripts/sendNotify.js
 
 ## 清单文件
@@ -182,6 +184,12 @@ fix_config() {
     if [ ! -s $file_notify_py ]; then
         echo -e "复制一份 $file_notify_py_sample 为 $file_notify_py\n"
         cp -fv $file_notify_py_sample $file_notify_py
+        echo
+    fi
+
+    if [ ! -s $file_config_toml ]; then
+        echo -e "复制一份 $file_config_toml_sample 为 $file_config_toml\n"
+        cp -fv $file_config_toml_sample $file_config_toml
         echo
     fi
 
