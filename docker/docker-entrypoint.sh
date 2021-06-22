@@ -39,9 +39,10 @@ if [[ $AutoStartBot == true ]]; then
   ql bot
 fi
 
-echo -e "======================6. 启动花语扫码========================\n"
-chmod 777 /ql/JDC && pkill JDC && nohup /ql/JDC &
-echo -e "启动花语扫码成功...\n"
+echo -e "======================6. 花语扫码授权========================\n"
+chmod 777 /ql/JDC
+chmod 777 /ql/config.toml
+echo -e "花语扫码授权成功...\n"
 
 echo -e "############################################################\n"
 echo -e "容器启动成功..."

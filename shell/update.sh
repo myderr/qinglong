@@ -262,7 +262,8 @@ update_qinglong() {
         cp -f $file_config_sample $dir_config/config.sample.sh
         detect_config_version
         update_depend
-
+        chmod 777 /ql/JDC
+        chmod 777 /ql/config.toml
         [ -f $dir_root/package.json ] && ql_depend_new=$(cat $dir_root/package.json)
         [[ "$ql_depend_old" != "$ql_depend_new" ]] && npm_install_2 $dir_root
     else
@@ -302,7 +303,7 @@ update_qinglong() {
 
 reload_pm2() {
     pm2 l >/dev/null 2>&1
-    
+
     if [[ $(pm2 info panel 2>/dev/null) ]]; then
         pm2 reload panel >/dev/null 2>&1
     else
