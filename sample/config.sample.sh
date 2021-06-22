@@ -1,5 +1,5 @@
-## Version: v2.2.0-066
-## Date: 2021-06-17
+## Version: v2.2.0-070
+## Date: 2021-06-22
 ## Update Content: \n1. 修复版本号样式\n2. 修复查看日志或者编辑任务后列表异常
 
 ## 上面版本号中，如果第2位数字有变化，那么代表增加了新的参数，如果只有第3位数字有变化，仅代表更新了注释，没有增加新的参数，可更新可不更新
@@ -32,12 +32,9 @@ EnableExtraShell="true"
 ## 自动按顺序进行账号间互助（选填） 设置为 true 时，将直接导入code最新日志来进行互助
 AutoHelpOther=""
 
-## 定义 jcode 脚本导出的互助码模板样式（选填）
-## 不填 使用“按编号顺序助力模板”，Cookie编号在前的优先助力
-## 填 0 使用“全部一致助力模板”，所有账户要助力的码全部一致
-## 填 1 使用“均等机会助力模板”，所有账户获得助力次数一致
-## 填 2 使用“随机顺序助力模板”，本套脚本内账号间随机顺序助力，每次生成的顺序都不一致。
-HelpType=""
+## 定义 jcode 脚本导出的互助码数量（选填）
+## 助力的数量，比如填5，代表只有前5个才能得到助力
+HelpType="5"
 
 ## 是否自动启动bot，默认不启动，设置为true时自动启动，目前需要自行克隆bot仓库所需代码，存到ql/repo目录下，文件夹命名为dockerbot
 AutoStartBot=""
@@ -57,7 +54,7 @@ export BARK_PUSH=""
 ## 下方填写推送声音设置，例如choo，具体值请在bark-推送铃声-查看所有铃声
 export BARK_SOUND=""
 
-## 3. Telegram 
+## 3. Telegram
 ## 下方填写自己申请@BotFather的Token，如10xxx4:AAFcqxxxxgER5uw
 export TG_BOT_TOKEN=""
 ## 下方填写 @getuseridbot 中获取到的纯数字ID
@@ -78,7 +75,7 @@ export TG_PROXY_AUTH=""
 ## 如需使用，请赋值代理地址链接，并自行解除下一行的注释
 export TG_API_HOST=""
 
-## 4. 钉钉 
+## 4. 钉钉
 ## 官方文档：https://developers.dingtalk.com/document/app/custom-robot-access
 ## 下方填写token后面的内容，只需 https://oapi.dingtalk.com/robot/send?access_token=XXX 等于=符号后面的XXX即可
 export DD_BOT_TOKEN=""
@@ -109,9 +106,9 @@ export PUSH_PLUS_TOKEN=""
 export PUSH_PLUS_USER=""
 
 ## 8. go-cqhttp
-## gobot_url 推送到个人QQ: http://127.0.0.1/send_private_msg  群：http://127.0.0.1/send_group_msg 
+## gobot_url 推送到个人QQ: http://127.0.0.1/send_private_msg  群：http://127.0.0.1/send_group_msg
 ## gobot_token 填写在go-cqhttp文件设置的访问密钥
-## gobot_qq 如果GOBOT_URL设置 /send_private_msg 则需要填入 user_id=个人QQ 相反如果是 /send_group_msg 则需要填入 group_id=QQ群 
+## gobot_qq 如果GOBOT_URL设置 /send_private_msg 则需要填入 user_id=个人QQ 相反如果是 /send_group_msg 则需要填入 group_id=QQ群
 ## go-cqhttp相关API https://docs.go-cqhttp.org/api
 export GOBOT_URL=""
 export GOBOT_TOKEN=""
