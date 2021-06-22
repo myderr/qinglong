@@ -4,7 +4,7 @@
     QLip            = "http://127.0.0.1" #青龙面板的ip
     QLport          = "5700" #青龙面板的端口，默认为5700
     notice          = "使用京东扫描二维码登录" #公告/说明
-    pushQr          = "https://qm.qq.com/cgi-bin/qm/qr?k=RRZCH42YKHYSjD94-zGH_IgsulzvHffE&jump_from=webapi" #消息推送二维码链接
+    pushQr          = "https://api.pwmqr.com/qrcode/create/?url=https://qm.qq.com/cgi-bin/qm/qr?k=RRZCH42YKHYSjD94-zGH_IgsulzvHffE&jump_from=webapi" #消息推送二维码链接
     logName         = "myderr_jd_scripts_jd_bean_change" #日志脚本名称
     allowAdd        = 0 #是否允许添加账号（0允许1不允许）不允许添加时则只允许已有账号登录
     allowNum        = 99 #允许添加账号的最大数量,-1为不限制
