@@ -56,10 +56,10 @@ export_codes_sub() {
         ## 输出ForOther系列变量
         if [[ ${#code[*]} -gt 0 ]]; then
             echo
-            for ((m = 0; m < $HelpType; m++)); do
+            for ((m = 0; m < ${#pt_pin[*]}; m++)); do
                 tmp_for_other=""
                 j=$((m + 1))
-                for ((n = 0; n < ${#pt_pin[*]}; n++)); do
+                for ((n = 0; n < $HelpType; n++)); do
                     [[ $m -eq $n ]] && continue
                     k=$((n + 1))
                     tmp_for_other="$tmp_for_other@\${$config_name_my$k}"
